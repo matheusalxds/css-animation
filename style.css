@@ -1,4 +1,8 @@
-body {
+/*
+  
+  Css about index.html
+
+  body {
   background: lightblue;
   text-align: center;
 }
@@ -25,3 +29,77 @@ body {
   background-color: salmon;
   transform: rotate(360deg);
 }
+*/
+
+html, body {
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  margin: 0;
+}
+
+.grass, .sky, .road {
+  position:relative;
+}
+
+.sky {
+  height: 40%;
+  background-color: skyblue;
+}
+
+.grass {
+  height: 30%;
+  background: seagreen;
+}
+
+.road {
+  height: 30%;
+  background: dimgray;
+  box-sizing: border-box;
+  border-top: 10px solid grey;
+  border-bottom: 10px solid grey;
+  width: 100%;
+}
+
+.lines {
+  box-sizing: border-box;
+  border: 5px dashed #fff;
+  height: 0px;
+  width: 100%;
+  position: absolute;
+  top: 45%;
+}
+
+/* 
+  Elements to animate
+*/
+.mario {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  animation-name: drive;
+  animation-fill-mode: both;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+.luigi {
+  position: absolute;
+  top: 100px;
+  left: 0;
+  animation-name: drive;animation-duration: 5s;
+  animation-fill-mode: both;
+  animation-duration: 6s;
+  animation-iteration-count: infinite;
+}
+
+/* 
+  Keyframes
+*/
+
+@keyframes drive {
+  from{ transform: translateX(-100px) }
+  to{ transform: translateX(1400px) }
+}
+
+/*
