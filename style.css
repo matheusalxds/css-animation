@@ -85,12 +85,28 @@ html, body {
 
 .luigi {
   position: absolute;
-  top: 100px;
+  top: 50px;
   left: 0;
   animation-name: drive;animation-duration: 5s;
   animation-fill-mode: both;
   animation-duration: 6s;
   animation-iteration-count: infinite;
+}
+
+.cloud { 
+  position: absolute;
+}
+.cloud:nth-child(1) {
+  width: 200px;
+  top: 120px;
+  opacity: 0.5;
+  animation: wind 80s linear infinite reverse;
+}
+
+.cloud:nth-child(2) {
+  width: 300px;
+  top: 0px;
+  animation: wind 50s linear infinite reverse;
 }
 
 /* 
@@ -100,6 +116,11 @@ html, body {
 @keyframes drive {
   from{ transform: translateX(-100px) }
   to{ transform: translateX(1400px) }
+}
+
+@keyframes wind {
+  from { left:  -300px }
+  to { left: 100% }
 }
 
 /*
